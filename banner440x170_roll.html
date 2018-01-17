@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>banner440x170</title>
+	<style>
+		body{
+			background: #666;
+		}
+		h1{ 
+			font-weight: normal;
+			color: white;
+		}
+		#banner440_170{
+			display: block;
+			width: 440px; height: 170px;
+			background: #ccc;
+			border: 1px solid #666;
+			position: relative;
+			overflow: hidden;
+			margin: 0 auto;
+		}
+		
+		/* 배너 위치 및 크기 */
+		#banner440_170 > .banners{
+			position:absolute;
+			left: 0; top: 0;
+			width: 1320px; height: 170px;	
+			animation: banner 15s infinite;
+
+		}
+		#banner440_170 > .banners > img{
+			display: block;
+			float: left;
+		}
+		
+		/* 배너 키프레임 */
+		@keyframes banner{
+			0%{ left: 0px;}
+			33%{ left: 0px;}
+			34%{ left: -440px;}
+			66%{ left: -440px;}
+			67%{ left: -880px;}
+			99%{ left: -880px;}
+			100%{ left: 0px;}
+		}
+		
+	</style>
+</head>
+<body>
+ 	<h1 style="text-align: center;">CSS3 롤링 배너</h1>
+	 <a href="#" id="banner440_170">
+	 	<div class="banners">
+	 		<img src="images/1.png" alt="">
+	 		<img src="images/2.png" alt="">
+	 		<img src="images/3.png" alt="">
+	 	</div>
+	 </a>
+</body>
+</html>
